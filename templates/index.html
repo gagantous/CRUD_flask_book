@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='materialize/css/materialize.min.css')}}">
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='fontawesome/css/all.min.css')}}">
+</head>
+<body>
+
+<div class="container-fluid">
+		<div class="card-panel orange lighten-1">
+	    	<div class="row">
+	      		<div class="col s12" >
+	      			<h3 class="flow-text">BUILD CRUD USING FLASK </h3>
+	      		</div>
+	    	</div>
+    	</div>
+    		<div class="row">
+    			<div class="col m12 s12 l12">
+    				<h5>
+    						BOOK LIST 
+						  <button class="btn waves-effect right" type="submit" name="action">TAMBAH
+						    <i class="fa fa-plus-circle"></i>
+						  </button>
+					</h5>
+    			</div>
+    			<div class="col m12 s12 l12">
+				      <table >
+				        <thead>
+				          <tr>
+				              <th>No</th>
+				              <th>ISBN</th>
+				              <th>Judul Buku</th>
+				              <th>Jenis Buku</th>
+				              <th>Pengarang</th>
+				              <th>Aksi</th>
+
+				          </tr>
+				        </thead>
+				        <tbody>
+				          <tr>
+				            <td>1</td>
+				            <td>90091820918</td>
+				            <td></td>
+				            <td>1</td>
+				            <td>1</td>
+				            <td width="15%">
+				            	<button class="btn-small waves-effect waves-light blue"><i class="fa fa-eye fa-sm"></i></button>
+				            	<button class="btn-small waves-effect waves-light amber"><i class="fa fa-edit fa-sm"></i></button>
+				            	<button class="btn-small waves-effect waves-light red "><i class="fa fa-trash fa-sm"></i></button></td>
+				          </tr>
+				        </tbody>
+				      </table>
+    			</div>
+    		</div>
+    	<div class="row">
+    		<div class="card-panel orange lighten-1">
+    			<div class="row">
+    				<div class="col s12">
+				    <span class="left-align">This should be left aligned</span>
+				    <span class="right">This should be right aligned</span>
+					</div>
+				</div>
+			</div>
+		</div>  
+</div>
+    	
+</div>
+</body>
+</html>
