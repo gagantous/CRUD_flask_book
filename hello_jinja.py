@@ -1,10 +1,10 @@
-from flask import Flask as fl, render_template as render, request
+from flask import Flask, render_template, request
 
-app = fl(__name__)
+app = Flask(__name__)
 
 @app.route('/')
-def hello():
-	return render('index.html')
+def main():
+    return render_template('j2_temp.html')
 
 @app.route('/process', methods=['POST'])
 def process():
@@ -13,11 +13,9 @@ def process():
  
     # Validate and send response
     if _username:
-        return render('process.html', username=_username)
+        return render_template('j2_response.html', username=_username)
     else:
         return 'Please go back and enter your name...', 400  # 400 Bad Request
 
-
-
-if __name__ == "__main__":
-	app.run(debug=True)
+if __name__ == '__main__':
+    app.run(debug=True)
