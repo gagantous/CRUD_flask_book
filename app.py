@@ -1,21 +1,42 @@
-from flask import Flask as fl, render_template as render, request
+from flask import Flask as fl, request
+from flask import render_template as render
 
 app = fl(__name__)
 
 @app.route('/')
-def hello():
-	return render('index.html')
+@app.route('/dashboard')
+def dashboard():
+	return render('dashboard/index.html')
 
-@app.route('/process', methods=['POST'])
-def process():
-    # Retrieve the HTTP POST request parameter value from 'request.form' dictionary
-    _username = request.form.get('username')  # get(attr) returns None if attr is not present
- 
-    # Validate and send response
-    if _username:
-        return render('process.html', username=_username)
-    else:
-        return 'Please go back and enter your name...', 400  # 400 Bad Request
+
+@app.route('/users')
+def users():
+	return render('users/index.html')
+
+@app.route('/products')
+def products():
+	return render('products/index.html')
+
+# @app.route('/products')
+# def dashboard():
+# 	return render('dashboard/index.html')
+
+# @app.route('/users')
+# def dashboard():
+# 	return render('dashboard/index.html')
+
+# @app.route('/login')
+# def dashboard():
+# 	return render('dashboard/index.html')
+
+# @app.route('/users')
+# def dashboard():
+# 	return render('dashboard/index.html')
+
+# @app.route('/users')
+# def dashboard():
+# 	return render('dashboard/index.html')
+
 
 
 
